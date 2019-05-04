@@ -56,4 +56,40 @@ class User_model extends CI_Model {
     public function delete($id){
         return $this->db->where('id_user', $id)->delete($this->_table);
     }
+
+    public function login(){
+        $post = $this->input->post();
+
+        $username = $post['username'];
+        $pass = md5($post['pass']);
+
+        $row = $this->db->where('username', $username)->where('pass', $pass)->get($this->_table)->result();
+
+        if(count($row)){
+            $data = $this->db->where('username', $username)->where('pass', $pass)->get($this->_table)->row();
+
+            $newdata = array(
+                'username'  => $data->username,
+                'logged_in' => TRUE
+            );
+        
+            $this->session->set_userdata($newdata);
+
+            redirect('backend/home/dashboard');
+        }else{
+            $this->session->set_flashdata('login', 'Login Gagal Username dan Password tidak terdaftar.');
+            redirect('backend/home/');
+        }
+    }
+
+    public function logout(){
+        $data = array(
+            'username',
+            'logged_in'
+        );
+
+        $this->session->unset_userdata($data);
+
+        redirect('backend/');
+    }
 }

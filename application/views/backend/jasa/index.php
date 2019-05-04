@@ -15,38 +15,36 @@
             <!-- navbar -->
             <?php $this->load->view('backend/_part/navbar.php') ?>
             
-            <p>Reset password adalah mengubah password menjadi "12345"</p>
-
             <div class="card">
                 <div class="card-header">
-                    <a href="<?= site_url('backend/user/add') ?>" class="btn btn-primary">+ Tambah Data</a>
+                    <a href="<?= site_url('backend/jasa/add') ?>" class="btn btn-primary">+ Tambah Data</a>
                 </div>
                 <div class="card-body">
                     <table id="table_id" class="display">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Username</th>
-                                <th>Password</th>
+                                <th>Nama Jasa</th>
+                                <th>Gambar</th>
+                                <th>Harga</th>
+                                <th>Keterangan</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <?php 
                             $no = 1;
                         ?>
-                        <?php foreach($user as $row): ?>
+                        <?php foreach($jasa as $row): ?>
                         <tbody>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= $row->username ?></td>
-                                <td>*****</td>
+                                <td><?= $row->nama_jasa ?></td>
+                                <td><img src="<?= base_url('assets/img/upload/'.$row->gambar) ?>" alt="gambar_jasa" width="100px"></td>
+                                <td><?= $row->harga ?></td>
+                                <td><?= $row->keterangan ?></td>
                                 <td>
-                                    <a href="<?= site_url('backend/user/reset/'.$row->id_user) ?>" class="btn btn-warning">Reset Password</a>
-                                    <a href="<?= site_url('backend/user/edit/'.$row->id_user) ?>" class="btn btn-success">Edit</a> 
-
-                                    <?php if($this->session->userdata('username') != $row->username): ?>
-                                        <a href="<?= site_url('backend/user/delete/'.$row->id_user) ?>" class="btn btn-danger" onClick="return confirm('Hapus data?')">Hapus</a>
-                                    <?php endif ?>
+                                    <a href="<?= site_url('backend/jasa/edit/'.$row->id_jasa) ?>" class="btn btn-success">Edit</a> 
+                                    <a href="<?= site_url('backend/jasa/delete/'.$row->id_jasa) ?>" class="btn btn-danger" onClick="return confirm('Hapus data?')">Hapus</a>
                                 </td>
                             </tr>
                         </tbody>

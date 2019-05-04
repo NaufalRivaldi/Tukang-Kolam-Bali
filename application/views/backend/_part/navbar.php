@@ -6,7 +6,7 @@
             <span></span>
         </button>
         <span class="navbar-text">
-            Halo, <?= $this->session->userdata('username') ?> <a href="<?= site_url('home/logout') ?>"><button class="btn btn-danger">Keluar</button></a>
+            Halo, <?= $this->session->userdata('username') ?> <a href="<?= site_url('backend/home/logout') ?>"><button class="btn btn-danger">Keluar</button></a>
         </span>
     </div>
 </nav>

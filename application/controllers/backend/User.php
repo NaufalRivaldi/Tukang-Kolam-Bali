@@ -7,6 +7,9 @@ class User extends CI_Controller {
 
         $this->load->model('user_model');
         $this->load->library('form_validation');
+
+        // Cek session
+        $this->def_model->cekSession();
     }
 
 	public function index(){

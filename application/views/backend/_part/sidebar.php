@@ -1,11 +1,11 @@
 <nav id="sidebar">
     <div class="sidebar-header">
-        <img src="<?= base_url('assets/img/icon.png') ?>" alt="" width="30"><span class="title"><?= APP_NAME ?></span>
+        <img src="<?= base_url('assets/img/logo.png') ?>" alt="" width="30"><span class="title"><?= APP_NAME ?></span>
     </div>
 
     <ul class="list-unstyled components">
         <li>
-            <a href="<?= site_url('home/dashboard') ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="<?= site_url('backend/home/dashboard') ?>"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         </li>
         <li>
             <a href="#admin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user"></i> Menu Admin</a>
