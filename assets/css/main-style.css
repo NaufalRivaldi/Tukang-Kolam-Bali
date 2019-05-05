@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.mini-kontak {
+	width: 100%;
+	height: 25px;
+	border-bottom: 1px solid rgb(219, 219, 219);
+	font-size: .8em;
+	line-height: 25px;
+}
+
+.jumbotron {
+	height: 90vh;
+	background-image: url('../img/slide/head2.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white !important;
+	text-shadow: 2px 2px black;
+	border-radius: 0px;
+	display: grid;
+	align-items: center;
+}
