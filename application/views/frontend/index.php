@@ -36,6 +36,7 @@
             <div class="row">
                 <?php foreach($jasa as $row): ?> 
                     <div class="col-md-4">
+                        <br>
                         <div class="card">
                             <a href="">
                                 <div class="card-img" style="background:url('<?= base_url('assets/img/upload/'.$row->gambar) ?>'); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
@@ -57,7 +58,7 @@
 
         <!-- contak -->
         <div class="container" style="margin-top:10%">
-            <div class="row">
+            <div class="row" style="margin-bottom: 3%">
                 <div class="col-md-12">
                 <center>
                     <h3>KONTAK KAMI</h3>
@@ -67,13 +68,56 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <p>
-                        asasdasd
-                        asdasd
-                        asd
-                    </p>
+                <div class="col-md-4">
+                    <center>
+                        <img src="<?= base_url('assets/img/pin.png') ?>" alt="icon" width="70px">
+                        <p>Jln. asd asd asd</p>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <img src="<?= base_url('assets/img/wa.png') ?>" alt="icon" width="70px">
+                        <p>+62 865 2154 2458</p>
+                    </center>
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <img src="<?= base_url('assets/img/email.png') ?>" alt="icon" width="70px">
+                        <p>admin@tukangkolambali.com</p>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <b>Kontak</b><br><br>
+                                <i class="fas fa-map-marker-alt"></i> Jln. asd asd asd<br>
+                                <i class="fas fa-phone"></i> +62 865 2154 2458<br>
+                                <i class="fas fa-envelope"></i> admin@tukangkolambali.com<br>
+                            </div>
+                            <div class="col-md-4">
+                                <b>Link</b><br><br>
+                                Jasa Kami
+                            </div>
+                            <div class="col-md-4">
+                                <b>Sosial Media</b><br><br>
+                                Facebook<br>
+                                Instagram
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:4%">
+                            <div class="col-md-12">
+                                Copyright &copy; 2019 | Tukang Kolam Bali<br>
+                                Denpasar - Bali
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
