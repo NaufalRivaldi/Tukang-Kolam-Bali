@@ -13,4 +13,10 @@ class Home extends CI_Controller {
         $data['jasa'] = $this->jasa_model->showData();
 		$this->load->view('frontend/index', $data);
     }
+
+    public function jasa($slug){
+        $data['title'] = 'Jasa';
+        $data['jasa'] = $this->jasa_model->showBySlug($slug);
+		$this->load->view('frontend/jasa-detail', $data);
+    }
 }

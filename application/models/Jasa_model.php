@@ -38,6 +38,10 @@ class Jasa_model extends CI_Model {
         return $this->db->where('id_jasa', $id)->get($this->_table)->row();
     }
 
+    public function showBySlug($slug){
+        return $this->db->where('slug', $slug)->get($this->_table)->row();
+    }
+
     public function add(){
         $post = $this->input->post();
 
