@@ -20,7 +20,8 @@
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
                     <a href="<?= site_url('backend/jasa') ?>">> Jasa</a>
-                    <a href="<?= site_url('backend/konten') ?>">> Konten</a>
+                    <a href="<?= site_url('backend/testimoni') ?>">> Testimoni</a>
+                    <a href="<?= site_url('backend/setting') ?>">> Setting</a>
                 </li>
             </ul>
         </li>

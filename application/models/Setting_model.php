@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Jasa_model extends CI_Model {
+class Setting_model extends CI_Model {
     private $_table = 'tb_jasa';
     public $nama_jasa;
     public $keyword;

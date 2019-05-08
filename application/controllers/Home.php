@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 
 	public function index(){
         $data['title'] = 'Home';
-        $data['jasa'] = $this->jasa_model->showData();
+        $data['jasa'] = $this->jasa_model->showDataTop();
 		$this->load->view('frontend/index', $data);
     }
 
@@ -18,5 +18,11 @@ class Home extends CI_Controller {
         $data['title'] = 'Jasa';
         $data['jasa'] = $this->jasa_model->showBySlug($slug);
 		$this->load->view('frontend/jasa-detail', $data);
+    }
+
+    public function daftar_jasa(){
+        $data['title'] = 'Daftar Jasa';
+        $data['jasa'] = $this->jasa_model->showData();
+		$this->load->view('frontend/jasa', $data);
     }
 }

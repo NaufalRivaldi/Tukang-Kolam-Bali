@@ -21,9 +21,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="#">Beranda <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Jasa Kami</a>
-                <a class="nav-item nav-link" href="#">Kontak</a>
+                <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Beranda <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#jasa">Jasa Kami</a>
+                <a class="nav-item nav-link" href="#kontak">Kontak</a>
             </div>
         </div>
     </div>
