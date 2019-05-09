@@ -15,6 +15,10 @@
             <input type="text" name="nama" class="form-control">
           </div>
           <div class="form-group">
+            <label for="Nama">Email</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+          <div class="form-group">
             <label for="Nama">Testimoni Anda</label>
             <textarea name="testimoni" id="" rows="5" class="form-control"></textarea>
           </div>

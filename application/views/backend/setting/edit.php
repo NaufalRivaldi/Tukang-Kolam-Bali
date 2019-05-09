@@ -20,48 +20,24 @@
                     <h3>Update Data Jasa</h3>
                 </div>
                 <div class="card-body">
-                <form action="<?= site_url('backend/jasa/update') ?>" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id_jasa" value="<?= $jasa->id_jasa ?>">
+                <form action="<?= site_url('backend/setting/update') ?>" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="id_setting" value="<?= $setting->id_setting ?>">
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Nama Jasa</label>
+                        <label class="col-sm-2 col-form-label">No Telp</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nama_jasa" class="form-control" value="<?= $jasa->nama_jasa ?>">
+                            <input type="text" name="no_telp" class="form-control" value="<?= $setting->no_telp ?>">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Keyword</label>
+                        <label class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="text" name="keyword" class="form-control col-6" value="<?= $jasa->keyword ?>">
-                            <small class="form-text text-muted">Pisahkan setiap kata dengan koma (,)</small>
+                            <input type="email" name="email" class="form-control" value="<?= $setting->email ?>">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Gambar</label>
+                        <label class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                            <input type="file" name="gambar" class="form-control">
-                            <input type="hidden" name="gambar_lama" value="<?= $jasa->gambar ?>">
-                            <small class="form-text text-muted">Tidak perlu diisi jika tidak ada perubahan gambar.</small>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Harga</label>
-                        <div class="col-sm-10">
-                            <input type="number" name="harga" class="form-control" value="<?= $jasa->harga ?>">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Keterangan</label>
-                        <div class="col-sm-10">
-                            <textarea name="keterangan" cols="5" rows="5" class="form-control"><?= $jasa->keterangan ?></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Tampilkan Top Jasa</label>
-                        <div class="col-sm-10">
-                            <select name="stat" id="stat" class="form-control col-6">
-                                <option value="1" <?= ($jasa->stat == 1) ? 'selected' : '' ?>>Ya</option>
-                                <option value="2" <?= ($jasa->stat == 2) ? 'selected' : '' ?>>Tidak</option>
-                            </select>
+                            <textarea name="alamat" cols="5" rows="5" class="form-control"><?= $setting->alamat ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

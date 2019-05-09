@@ -5,13 +5,13 @@
                 <div class="row">
                     <div class="col-md-4">
                         <b>Kontak</b><br><br>
-                        <i class="fas fa-map-marker-alt"></i> Jln. asd asd asd<br>
-                        <i class="fas fa-phone"></i> +62 865 2154 2458<br>
-                        <i class="fas fa-envelope"></i> admin@tukangkolambali.com<br>
+                        <i class="fas fa-map-marker-alt"></i> <?= $setting->alamat ?><br>
+                        <i class="fas fa-phone"></i> <?= $setting->no_telp ?><br>
+                        <i class="fas fa-envelope"></i> <?= $setting->email ?><br>
                     </div>
                     <div class="col-md-4">
                         <b>Link</b><br><br>
-                        Jasa Kami
+                        <a href="<?= site_url('home/daftar_jasa') ?>">Jasa Kami</a>
                     </div>
                     <div class="col-md-4">
                         <b>Sosial Media</b><br><br>

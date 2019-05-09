@@ -13,16 +13,16 @@
         <div class="jumbotron">
             <div class="container">
                 <center>
-                <h1 class="display-2"><?= strtoupper(APP_NAME) ?></h1>
+                <h1><?= strtoupper(APP_NAME) ?></h1>
                 <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
                 <hr class="my-4">
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Kenali Kami</a>
                 </center>
             </div>
         </div>
 
         <!-- Jasa -->
+        <section id="#jasa">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -54,9 +54,13 @@
                     </div>
                 <?php endforeach ?>
             </div>
-            <div class="row justify-content-md-center" style="margin-top:2%">
-                <a href="<?= site_url('home/daftar_jasa') ?>" class="btn btn-primary">Lihat Lebih Banyak</a>
-            </div>
+        </div>
+        </section>
+
+        <div class="container">
+            <center>
+                <a href="<?= site_url('home/daftar_jasa') ?>" class="btn btn-primary" style="margin-top:2%">Lihat Lebih Banyak</a>
+            </center>
         </div>
 
         <!-- contak -->
@@ -77,7 +81,7 @@
             <div class="row justify-content-md-center" style="margin-bottom:3%">
                 <div class="col-md-3 col-sm-6">
                     <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="50%" class="testi-img"><br><br>
+                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
                         <p><b>Nama User</b></p>
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
@@ -86,7 +90,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="50%" class="testi-img"><br><br>
+                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
                         <p><b>Nama User</b></p>
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
@@ -95,7 +99,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="50%" class="testi-img"><br><br>
+                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
                         <p><b>Nama User</b></p>
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
@@ -104,7 +108,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="50%" class="testi-img"><br><br>
+                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
                         <p><b>Nama User</b></p>
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"

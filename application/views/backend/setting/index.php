@@ -17,40 +17,26 @@
             
             <div class="card">
                 <div class="card-header">
-                    <a href="<?= site_url('backend/jasa/add') ?>" class="btn btn-primary">+ Tambah Data</a>
+                    <a href="<?= (empty($setting)) ? site_url('backend/setting/add') : '#' ?>" class="btn btn-primary">Set Data</a>
+                    <a href="<?= (!empty($setting)) ? site_url('backend/setting/edit/'.$setting->id_setting ) : '' ?>" class="btn btn-success">Edit Data</a>
                 </div>
                 <div class="card-body">
-                    <table id="table_id" class="display">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Jasa</th>
-                                <th>Gambar</th>
-                                <th>Harga</th>
-                                <th>Keterangan</th>
-                                <th>Stat</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <?php 
-                            $no = 1;
-                        ?>
-                        <?php foreach($jasa as $row): ?>
-                        <tbody>
-                            <tr>
-                                <td><?= $no++ ?></td>
-                                <td><?= $row->nama_jasa ?></td>
-                                <td><img src="<?= base_url('assets/img/upload/'.$row->gambar) ?>" alt="gambar_jasa" width="100px"></td>
-                                <td><?= $row->harga ?></td>
-                                <td><?= $row->keterangan ?></td>
-                                <td><?= $row->stat ?></td>
-                                <td>
-                                    <a href="<?= site_url('backend/jasa/edit/'.$row->id_jasa) ?>" class="btn btn-success">Edit</a> 
-                                    <a href="<?= site_url('backend/jasa/delete/'.$row->id_jasa) ?>" class="btn btn-danger" onClick="return confirm('Hapus data?')">Hapus</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach ?>
+                    <table class="table">
+                        <tr>
+                            <td width="20%">No Telp</td>
+                            <td width="5%">:</td>
+                            <td><?= $setting->no_telp ?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Email</td>
+                            <td width="5%">:</td>
+                            <td><?= $setting->email ?></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Alamat</td>
+                            <td width="5%">:</td>
+                            <td><?= $setting->alamat     ?></td>
+                        </tr>
                     </table>
                 </div>
             </div>

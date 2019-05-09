@@ -17,48 +17,26 @@
             
             <div class="card">
                 <div class="card-header">
-                    <h3>Tambah Data Jasa</h3>
+                    <h3>Setting</h3>
                 </div>
                 <div class="card-body">
-                <form action="<?= site_url('backend/jasa/add') ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?= site_url('backend/setting/add') ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Nama Jasa</label>
+                        <label class="col-sm-2 col-form-label">No Telp</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nama_jasa" class="form-control">
+                            <input type="text" name="no_telp" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Keyword</label>
+                        <label class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                            <input type="text" name="keyword" class="form-control col-6">
-                            <small class="form-text text-muted">Pisahkan setiap kata dengan koma (,)</small>
+                            <input type="email" name="email" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Gambar</label>
+                        <label class="col-sm-2 col-form-label">Alamat</label>
                         <div class="col-sm-10">
-                            <input type="file" name="gambar" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Harga</label>
-                        <div class="col-sm-10">
-                            <input type="number" name="harga" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Keterangan</label>
-                        <div class="col-sm-10">
-                            <textarea name="keterangan" cols="5" rows="5" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Tampilkan Top Jasa</label>
-                        <div class="col-sm-10">
-                            <select name="stat" id="stat" class="form-control col-6">
-                                <option value="1">Ya</option>
-                                <option value="2">Tidak</option>
-                            </select>
+                            <textarea name="alamat" cols="5" rows="5" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

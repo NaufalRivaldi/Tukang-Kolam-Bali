@@ -1,9 +1,9 @@
 <div class="mini-kontak">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">Temukan kami : Jln. asdasd asdasd</div>
+            <div class="col-sm-6">Temukan kami : <?= $setting->alamat ?></div>
             <div class="col-sm-6">
-                <p class="text-sm-right">WA : 0895 3938 2938</p>
+                <p class="text-sm-right">Telp : <?= $setting->no_telp ?></p>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="<?= site_url('home') ?>">Beranda <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#jasa">Jasa Kami</a>
+                <a class="nav-item nav-link" href="<?= site_url('home/daftar_jasa') ?>">Jasa Kami</a>
                 <a class="nav-item nav-link" href="#kontak">Kontak</a>
             </div>
         </div>

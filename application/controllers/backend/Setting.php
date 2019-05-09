@@ -1,11 +1,11 @@
-<?php
+    <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Setting extends CI_Controller {
     public function __construct(){
         parent::__construct();
 
-        $this->load->model('jasa_model');
+        $this->load->model('setting_model');
         $this->load->library('form_validation');
 
         // Cek session
@@ -13,35 +13,30 @@ class Setting extends CI_Controller {
     }
 
 	public function index(){
-        $data['jasa'] = $this->jasa_model->showData();
-		$this->load->view('backend/jasa/index', $data);
+        $data['setting'] = $this->setting_model->showData();
+		$this->load->view('backend/setting/index', $data);
     }
 
     public function add(){
-        $jasa = $this->jasa_model;
+        $setting = $this->setting_model;
         $validation = $this->form_validation;
-        $validation->set_rules($jasa->rules());
+        $validation->set_rules($setting->rules());
 
         if($validation->run()){
-            $jasa->add();
-            redirect('backend/jasa');
+            $setting->add();
+            redirect('backend/setting');
         }
 
-        $this->load->view('backend/jasa/form');
+        $this->load->view('backend/setting/form');
     }
 
     public function edit($id){
-        $data['jasa'] = $this->jasa_model->showById($id);
-        $this->load->view('backend/jasa/edit', $data);
+        $data['setting'] = $this->setting_model->showById($id);
+        $this->load->view('backend/setting/edit', $data);
     }
 
     public function update(){
-        $this->jasa_model->update();
-        redirect('backend/jasa');
-    }
-
-    public function delete($id){
-        $this->jasa_model->delete($id);
-        redirect('backend/jasa');
+        $this->setting_model->update();
+        redirect('backend/setting');
     }
 }
