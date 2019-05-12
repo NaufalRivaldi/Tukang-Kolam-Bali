@@ -19,7 +19,7 @@
                     <p>
                         <h3><?= $jasa->nama_jasa ?></h3>
                         <hr>
-                        <span class="badge badge-primary">Rp. <?= number_format($jasa->harga) ?></span><br>
+                        <span class="badge badge-primary">Info Harga Hubungi : <?= $setting->no_telp ?></span><br>
                         <?= $jasa->keterangan ?>
                     </p>
                 </div>

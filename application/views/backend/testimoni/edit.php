@@ -20,13 +20,26 @@
                     <h3>Edit Data</h3>
                 </div>
                 <div class="card-body">
-                <form action="<?= site_url('backend/user/update') ?>" method="POST">
-                    <input type="hidden" name="id_user" class="form-control" value="<?= $user->id_user ?>">
+                <form action="<?= site_url('backend/testimoni/update') ?>" method="POST">
+                    <input type="hidden" name="id_testimoni" class="form-control" value="<?= $testimoni->id_testimoni ?>">
+                    <input type="hidden" name="stat" class="form-control" value="<?= $testimoni->stat ?>">
 
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Username</label>
+                        <label class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" name="username" class="form-control" value="<?= $user->username ?>">
+                            <input type="text" name="nama" class="form-control" value="<?= $testimoni->nama ?>">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" name="email" class="form-control" value="<?= $testimoni->email ?>">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Testimoni</label>
+                        <div class="col-sm-10">
+                            <textarea name="testimoni" id="" rows="5" class="form-control"><?= $testimoni->testimoni ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

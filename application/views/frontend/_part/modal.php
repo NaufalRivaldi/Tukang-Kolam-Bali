@@ -9,18 +9,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
+        <form action="<?= site_url('testimoni/add') ?>" method="POST">
           <div class="form-group">
             <label for="Nama">Nama</label>
-            <input type="text" name="nama" class="form-control">
+            <input type="text" name="nama" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="Nama">Email</label>
-            <input type="email" name="email" class="form-control">
+            <input type="email" name="email" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="Nama">Testimoni Anda</label>
-            <textarea name="testimoni" id="" rows="5" class="form-control"></textarea>
+            <textarea name="testimoni" id="" rows="5" class="form-control" required></textarea>
           </div>
           <div class="form-group">
             <input type="submit" value="Kirim Testimoni" class="btn btn-primary">
@@ -32,4 +32,10 @@
 </div>
 
 <!-- flash data -->
-<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+<?php
+  if(!empty($this->session->flashdata('success'))){
+    echo "
+      <script>alert('".$this->session->flashdata('success')."')</script>
+    ";
+  }
+?>

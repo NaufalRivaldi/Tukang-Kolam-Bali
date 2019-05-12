@@ -24,6 +24,7 @@ class Testimoni extends CI_Controller {
 
         if($validation->run()){
             $testimoni->add();
+            echo "<script>alert('Testimoni anda sudah terposting.')</script>";
             redirect('backend/testimoni');
         }
 
@@ -42,6 +43,11 @@ class Testimoni extends CI_Controller {
 
     public function delete($id){
         $this->testimoni_model->delete($id);
+        redirect('backend/testimoni');
+    }
+
+    public function acc($id){
+        $this->testimoni_model->acc($id);
         redirect('backend/testimoni');
     }
 }

@@ -16,3 +16,11 @@
 
 <!-- DataTable -->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+<!-- tinyMCE -->
+<script src='https://cloud.tinymce.com/5/tinymce.min.js?apiKey=8umgjhgub5p9ybjnnc9zo5xwvo264tfnvficzvbynegdl1c4'></script>
+<script>
+  tinymce.init({
+    selector: '#mytextarea'
+  });
+</script>

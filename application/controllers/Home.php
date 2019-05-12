@@ -7,12 +7,17 @@ class Home extends CI_Controller {
 
         $this->load->model('jasa_model');
         $this->load->model('setting_model');
+        $this->load->model('testimoni_model');
     }
 
 	public function index(){
         $data['title'] = 'Home';
         $data['jasa'] = $this->jasa_model->showDataTop();
         $data['setting'] = $this->setting_model->showData();
+        $data['testimoni'] = $this->testimoni_model->showDataLimit();
+        
+        // print_r($data['testimoni']);
+        // die();
 		$this->load->view('frontend/index', $data);
     }
 

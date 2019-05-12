@@ -15,13 +15,12 @@
                     </div>
                     <div class="col-md-4">
                         <b>Sosial Media</b><br><br>
-                        Facebook<br>
-                        Instagram
+                        <a href="https://www.instagram.com/tukangkolam_bali/?hl=id" target="_BLANK">Instagram</a>
                     </div>
                 </div>
                 <div class="row" style="padding-top:5%; padding-bottom: 10%;">
                     <div class="col-md-12">
-                        Copyright &copy; 2019 | Tukang Kolam Bali<br>
+                        Copyright &copy; 2019 | Tukang Kolam Bali. Design By Imazin.id<br>
                         Denpasar - Bali
                     </div>
                 </div>

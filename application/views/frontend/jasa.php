@@ -32,7 +32,7 @@
                                 <h5 class="card-title">
                                     <a href="<?= site_url('home/jasa/'.$row->slug) ?>"><?= $row->nama_jasa ?></a>
                                 </h5>
-                                <span class="badge badge-primary">Rp. <?= number_format($row->harga) ?></span>
+                                <span class="badge badge-primary">Info Harga Hubungi : <?= $setting->no_telp ?></span>
                                 <p class="card-text">
                                     <?= substr($row->keterangan,0,200) ?> ....
                                 </p>

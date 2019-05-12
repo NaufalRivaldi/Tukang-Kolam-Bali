@@ -6,6 +6,7 @@ class Testimoni_model extends CI_Model {
     public $nama;
     public $email;
     public $testimoni;
+    public $stat = 2;
 
     public function rules(){
         return [
@@ -31,6 +32,10 @@ class Testimoni_model extends CI_Model {
         return $this->db->get($this->_table)->result();
     }
 
+    public function showDataLimit(){
+        return $this->db->order_by('id_testimoni', 'asc')->limit('4')->where('stat', '1')->get($this->_table)->result();
+    }
+
     public function showById($id){
         return $this->db->where('id_testimoni', $id)->get($this->_table)->row();
     }
@@ -52,8 +57,17 @@ class Testimoni_model extends CI_Model {
         $this->nama = $post['nama'];
         $this->email = $post['email'];
         $this->testimoni = $post['testimoni'];
+        $this->stat = $post['stat'];
 
         return $this->db->where('id_testimoni', $id)->update($this->_table, $this);
+    }
+
+    public function acc($id){
+        $data = [
+            "stat" => "1"
+        ];
+
+        return $this->db->where('id_testimoni', $id)->update($this->_table, $data);
     }
 
     public function delete($id){

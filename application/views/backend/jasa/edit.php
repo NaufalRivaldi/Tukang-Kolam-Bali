@@ -52,7 +52,7 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Keterangan</label>
                         <div class="col-sm-10">
-                            <textarea name="keterangan" cols="5" rows="5" class="form-control"><?= $jasa->keterangan ?></textarea>
+                            <textarea name="keterangan" cols="5" rows="20" id="mytextarea"><?= $jasa->keterangan ?></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

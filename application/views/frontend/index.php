@@ -14,9 +14,9 @@
             <div class="container">
                 <center>
                 <h1><?= strtoupper(APP_NAME) ?></h1>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p class="lead">Melayani berbagai macam solusi untuk masalah kolam anda.</p>
                 <hr class="my-4">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p>Pool & SPA Specialist</p>
                 </center>
             </div>
         </div>
@@ -27,10 +27,22 @@
             <div class="row">
                 <div class="col-md-12">
                 <center>
-                    <h3>JASA KAMI</h3>
+                    <h3>TENTANG KAMI</h3>
                     <hr class="hr-custom">
-                    <p class="text-center text-muted text-padding">Berikut beberapa jasa yang kami miliki untuk anda.</p>
                 </center>
+                <p class="text text-muted text-padding">
+                    <b>TUKANG KOLAM BALI</b> adalah perusahaan mikro yang dikelola oleh perseorangan, yang dimana memiliki tim khusus, sahli dan berpengalaman untuk melakukan perawatan kolam renang untuk selalu bersih, jernih, mengatasi berbagai masalah kolam renang, serta menyediakan bahan atau alat - alat dalam perawatan kolam berenang.<br>
+                    Jasa yang kami tawarkan adalah :<br>
+                    <ul>
+                        <li>Pool Maintenance</li>
+                        <li>Pool Chemical</li>
+                        <li>Pool Service</li>
+                        <li>Pump Service</li>
+                        <li>Pool Equipment</li>
+                        <li>Pool Consultation</li>
+                        <li>Installation Service</li>
+                    </ul>
+                </p>
                 </div>
             </div>
             <div class="row justify-content-md-center">
@@ -45,7 +57,7 @@
                                 <h5 class="card-title">
                                     <a href="<?= site_url('home/jasa/'.$row->slug) ?>"><?= $row->nama_jasa ?></a>
                                 </h5>
-                                <span class="badge badge-primary">Rp. <?= number_format($row->harga) ?></span>
+                                <span class="badge badge-primary">Info Harga Hubungi : <?= $setting->no_telp ?></span>
                                 <p class="card-text">
                                     <?= substr($row->keterangan,0,200) ?> ....
                                 </p>
@@ -79,42 +91,29 @@
                 </div>
             </div>
             <div class="row justify-content-md-center" style="margin-bottom:3%">
+                <?php if(!empty($testimoni)){ ?>
+                    <?php foreach($testimoni as $row): ?>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="testi"><br>
+                            <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
+                            <p><b><?= $row->nama ?></b></p>
+                            <p>
+                                "<?= substr($row->testimoni,0,200) ?> ..."
+                            </p>
+                        </div>
+                    </div>
+                    <?php endforeach ?>
+                <?php }else{ ?>
                 <div class="col-md-3 col-sm-6">
                     <div class="testi"><br>
                         <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
-                        <p><b>Nama User</b></p>
+                        <p><b>Agus Nurahman</b></p>
                         <p>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
+                            "Pelayanan Baik dan pekerjaan sangat bagus, saya sangat puas akan pelayanan dari tukang kolam bali ini."
                         </p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
-                        <p><b>Nama User</b></p>
-                        <p>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
-                        <p><b>Nama User</b></p>
-                        <p>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="testi"><br>
-                        <img src="<?= base_url('assets/img/user-testi.jpg') ?>" alt="user" width="30%" class="testi-img"><br><br>
-                        <p><b>Nama User</b></p>
-                        <p>
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla unde culpa, consectetur ut velit repudiandae iste omnis ipsam nam. Nemo unde repudiandae in sed aperiam beatae ipsa odio commodi!"
-                        </p>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
 

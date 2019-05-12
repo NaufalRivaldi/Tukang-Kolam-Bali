@@ -27,6 +27,7 @@
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Testimoni</th>
+                                <th>Stat</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -40,10 +41,13 @@
                                 <td><?= $no++ ?></td>
                                 <td><?= $row->nama ?></td>
                                 <td><?= $row->email ?></td>
-                                <td><?= $row->testimoni ?></td>
+                                <td width="30%"><?= substr($row->testimoni,0,200) ?> ...</td>
+                                <td><?= $row->stat ?></td>
                                 <td>
+                                    <?php if($row->stat == '2'): ?>
+                                    <a href="<?= site_url('backend/testimoni/acc/'.$row->id_testimoni) ?>" class="btn btn-success">Post</a>
+                                    <?php endif ?>
                                     <a href="<?= site_url('backend/testimoni/edit/'.$row->id_testimoni) ?>" class="btn btn-success">Edit</a> 
-
                                     <a href="<?= site_url('backend/testimoni/delete/'.$row->id_testimoni) ?>" class="btn btn-danger" onClick="return confirm('Hapus data?')">Hapus</a>
                                 </td>
                             </tr>
