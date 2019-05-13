@@ -32,7 +32,7 @@
         <div class="col-md-3">
             <center>
                 <img src="<?= base_url('assets/img/ig.png') ?>" alt="icon" width="70px">
-                <p><a href="https://www.instagram.com/tukangkolam_bali/?hl=id" target="_BLANK">@tukangkolam_bali</a></p>
+                <p><a href="https://www.instagram.com/tukangkolambali/" target="_BLANK">@tukangkolambali</a></p>
             </center>
         </div>
     </div>

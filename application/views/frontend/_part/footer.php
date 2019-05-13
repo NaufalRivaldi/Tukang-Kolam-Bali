@@ -15,7 +15,7 @@
                     </div>
                     <div class="col-md-4">
                         <b>Sosial Media</b><br><br>
-                        <a href="https://www.instagram.com/tukangkolam_bali/?hl=id" target="_BLANK">Instagram</a>
+                        <a href="https://www.instagram.com/tukangkolambali/" target="_BLANK">Instagram</a>
                     </div>
                 </div>
                 <div class="row" style="padding-top:5%; padding-bottom: 10%;">

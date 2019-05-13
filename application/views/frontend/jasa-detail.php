@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <meta name="keywords" content="<?= $keyword ?>, jasa, jasa kolam, tukang kolam bali, tukang kolam, bali, kolam">
+        <meta property="og:title" content="<?= $nama_jasa ?> - Tukang Kolam Bali">
+        <meta property="og:image" content="<?= base_url('assets/img/upload/'.$gambar) ?>">
+        <meta property="image" content="<?= base_url('assets/img/upload/'.$gambar) ?>">
+        <meta property="description" content="<?= $keterangan ?>">
+        <meta name="description" content="<?= $keterangan ?>">
+        <meta property="og:description" content="<?= $keterangan ?>">
+
         <?php $this->load->view('frontend/_part/head'); ?>
     </head>
     

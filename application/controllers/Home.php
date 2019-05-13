@@ -15,9 +15,8 @@ class Home extends CI_Controller {
         $data['jasa'] = $this->jasa_model->showDataTop();
         $data['setting'] = $this->setting_model->showData();
         $data['testimoni'] = $this->testimoni_model->showDataLimit();
-        
-        // print_r($data['testimoni']);
-        // die();
+        $data['description'] = 'TUKANG KOLAM BALI adalah perusahaan mikro yang dikelola oleh perseorangan, yang dimana memiliki tim khusus, sahli dan berpengalaman untuk melakukan perawatan kolam renang untuk selalu bersih, jernih, mengatasi berbagai masalah kolam renang, serta menyediakan bahan atau alat - alat dalam perawatan kolam berenang.';
+
 		$this->load->view('frontend/index', $data);
     }
 
@@ -32,6 +31,8 @@ class Home extends CI_Controller {
         $data['title'] = 'Daftar Jasa';
         $data['jasa'] = $this->jasa_model->showData();
         $data['setting'] = $this->setting_model->showData();
+        $data['description'] = 'Berikut beberapa jasa yang kami tawarkan untuk anda.';
+
 		$this->load->view('frontend/jasa', $data);
     }
 }
