@@ -1,4 +1,4 @@
-    <?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Testimoni extends CI_Controller {
@@ -22,3 +22,5 @@ class Testimoni extends CI_Controller {
         }
     }
 }
+
+?>

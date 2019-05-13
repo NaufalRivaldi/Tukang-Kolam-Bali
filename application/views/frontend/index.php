@@ -67,7 +67,7 @@
                                 </h5>
                                 <span class="badge badge-primary">Info Harga Hubungi : <?= $setting->no_telp ?></span>
                                 <p class="card-text">
-                                    <?= substr($row->keterangan,0,200) ?> ....
+                                    <?= substr($row->keterangan,0,100) ?> ....
                                 </p>
                             </div>
                         </div>
